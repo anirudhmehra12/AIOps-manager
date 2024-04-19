@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace Monitoring Dashboard</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f5f5f5;">
+
+    <div class="container" style="max-width: 1200px; margin: 50px auto; padding: 20px; text-align: center; background-color: #fff; border-radius: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);">
+        <h1 style="color: #333; margin-bottom: 20px;">Workspace Monitoring Dashboard</h1>
+        <div class="video-frame" style="margin: 0 auto; width: 800px; background-color: #fff; border-radius: 20px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); overflow: hidden;">
+            <img id="video-stream" src="" alt="Workspace Video Stream" style="width: 100%; height: auto; display: block; border-radius: 20px;">
+        </div>
+        <div class="options" style="margin-top: 20px;">
+            <h2>Options</h2>
+            <a href="home.html" class="btn" style="background-color: #007bff; color: #fff; border: none; padding: 15px 30px; margin: 5px; border-radius: 30px; cursor: pointer; transition: background-color 0.3s ease;">Live Feed</a>
+            <button class="btn" style="background-color: #007bff; color: #fff; border: none; padding: 15px 30px; margin: 5px; border-radius: 30px; cursor: pointer; transition: background-color 0.3s ease;">Analytics</button>
+            <button class="btn" style="background-color: #007bff; color: #fff; border: none; padding: 15px 30px; margin: 5px; border-radius: 30px; cursor: pointer; transition: background-color 0.3s ease;">Reports</button>
+            <button class="btn" style="background-color: #007bff; color: #fff; border: none; padding: 15px 30px; margin: 5px; border-radius: 30px; cursor: pointer; transition: background-color 0.3s ease;">Settings</button>
+        </div>
+    </div>
+
+    <div class="footer" style="background-color: #333; color: #fff; text-align: center; padding: 10px 0; position: fixed; bottom: 0; width: 100%;">
+        <p>Fake References and About Info</p>
+    </div>
+
+    <script>
+        // Initialize the video stream when the page loads
+        window.onload = function() {
+            var videoStream = document.getElementById('video-stream');
+            videoStream.src = "{{  url_for('video_feed') }}";
+        };
+    </script>
+
+</body>
+</html>
